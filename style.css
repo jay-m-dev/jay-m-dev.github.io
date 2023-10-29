@@ -1,0 +1,177 @@
+/* Use a consistent font size and line-height for better readability */
+/* html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* margin: 0; */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%; /* To make sure it doesn't exceed max-width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+/* Center-align the header text and use a larger font size for h1 */
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.content > * {
+    margin-bottom: 40px;
+}
+
+/* Use a larger font size for section headings */
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 20px; /* Increased margin for separation */
+    text-transform: uppercase;
+    color: #0074b2;
+    border-bottom: 2px solid #0074b2;
+    padding-bottom: 5px;
+}
+
+/* Style the footer with a different background color and a slightly larger font size */
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+/* Add margin to the second icon to create space */
+.contact-icons {
+    text-align: center; /* Center-align the icons */
+}
+
+.contact-icons a {
+    display: inline-block; /* Display the icons in a row */
+    margin-top: 20px;
+    margin-right: 20px; /* Add margin to create space between icons */
+}
+
+.contact-icons .si-github i {
+    color: black;
+}
+
+/* Adjust the margin for smaller screens if needed */
+@media screen and (max-width: 768px) {
+    .contact-icons a {
+        margin-right: 10px; /* Reduce margin for smaller screens */
+    }
+}
+/* Remove bullet points from the skills list */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style the skills list items with a custom marker (e.g., a small square) */
+.skills-list li {
+    padding: 5px
+}
+
+.skills-list li:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+/* Style the projects table */
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects-table th, .projects-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.projects-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.projects-table a {
+    text-decoration: none;
+    color: #0074b2; /* Adjust the color to your preference */
+    font-weight: bold;
+}
+
+.projects-table ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.projects-table li {
+    padding: 5px;
+}
+/* Style the contributions list in the table */
+.projects-table .contributions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin to match the skills list */
+}
+
+.projects-table .contributions-list li:nth-child(odd) {
+    background-color: #f2f2f2; /* Reset the background color for even rows */
+}
+/* Remove bullet points from the publications list */
+.publications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publications-list li {
+    padding: 5px
+}
+
+.publications-list li:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+.navigation-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-menu li {
+    margin: 0 20px;
+}
+
+.navigation-menu a {
+    text-decoration: none;
+    color: #0074b2;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navigation-menu a:hover {
+    text-decoration: underline;
+    background-color: #0074b2;
+    color: #fff;
+}
