@@ -46,7 +46,7 @@ body {
 
 /* Use a larger font size for section headings */
 .content h2 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px; /* Increased margin for separation */
     /* text-transform: uppercase; */
     color: #0074b2;
@@ -156,10 +156,11 @@ body {
     display: flex;
     justify-content: center;
     background-color: #0074b2;
+    font-size: 20px;
 }
 
 .navigation-menu li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .navigation-menu a {
