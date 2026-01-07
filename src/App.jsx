@@ -291,9 +291,6 @@ from-transparent via-sky-300/10 to-transparent" />
             <a className="text-slate-300 hover:text-slate-50" href="#focus">
               Focus
             </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#about">
-              About
-            </a>
             <a className="text-slate-300 hover:text-slate-50" href="#skills">
               Skills
             </a>
@@ -392,20 +389,6 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
             </div>
           </div>
         </section>
-
-        <Section
-          id="about"
-          kicker="ABOUT"
-          title="Quick bio"
-        >
-          <div className="glass rounded-2xl p-6">
-            <p className="text-sm leading-relaxed text-slate-300">
-              Senior software engineer building secure, reliable systems in
-              enterprise environments, with hands-on experience across SQL
-              platforms, knowledge graphs, and vector retrieval.
-            </p>
-          </div>
-        </Section>
 
         <Section
           id="focus"
