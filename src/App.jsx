@@ -213,18 +213,21 @@ export default function App() {
         desc: "Knowledge-graph modeling plus semantic retrieval for research \
 systems.",
         tags: ["Neo4j", "Memgraph", "Vectors", "Search"],
+        href: "https://alzkb.ai",
       },
       {
         name: "Data Platforms & Reporting",
         desc: "SQL-driven pipelines and systems supporting analytics and \
 mission-critical operations.",
         tags: ["SQL", "Data", "Reliability"],
+        href: "https://github.com/EpistasisLab/Aliro",
       },
       {
         name: "Production Engineering",
         desc: "Stability, maintainability, and long-term ownership in \
 enterprise environments.",
         tags: ["Ops", "Monitoring", "Quality"],
+        href: "https://www.linkedin.com/in/moran-jay/",
       },
     ];
   }, []);
@@ -287,6 +290,9 @@ from-transparent via-sky-300/10 to-transparent" />
           <nav className="hidden items-center gap-5 text-sm md:flex">
             <a className="text-slate-300 hover:text-slate-50" href="#focus">
               Focus
+            </a>
+            <a className="text-slate-300 hover:text-slate-50" href="#about">
+              About
             </a>
             <a className="text-slate-300 hover:text-slate-50" href="#skills">
               Skills
@@ -386,6 +392,20 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
             </div>
           </div>
         </section>
+
+        <Section
+          id="about"
+          kicker="ABOUT"
+          title="Quick bio"
+        >
+          <div className="glass rounded-2xl p-6">
+            <p className="text-sm leading-relaxed text-slate-300">
+              Senior software engineer building secure, reliable systems in
+              enterprise environments, with hands-on experience across SQL
+              platforms, knowledge graphs, and vector retrieval.
+            </p>
+          </div>
+        </Section>
 
         <Section
           id="focus"
@@ -489,13 +509,21 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
         >
           <div className="grid gap-4 md:grid-cols-3">
             {projects.map((p) => (
-              <div
+              <a
                 key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
                 className="glass rounded-2xl p-6 transition \
-hover:border-sky-400/30 hover:shadow-neon border border-slate-800/60"
+hover:border-sky-400/30 hover:shadow-neon border border-slate-800/60 \
+block group"
               >
-                <div className="text-sm font-semibold text-slate-50">
-                  {p.name}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="text-sm font-semibold text-slate-50">
+                    {p.name}
+                  </div>
+                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 \
+group-hover:text-sky-200" />
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   {p.desc}
@@ -505,7 +533,7 @@ hover:border-sky-400/30 hover:shadow-neon border border-slate-800/60"
                     <Tag key={t}>{t}</Tag>
                   ))}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
@@ -591,14 +619,6 @@ group-hover:text-sky-200" />
 
             <div className="glass rounded-2xl p-6">
               <div className="text-sm font-semibold text-slate-50">
-                Quick bio
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Senior software engineer building secure, reliable systems in
-                enterprise environments, with hands-on experience across SQL
-                platforms, knowledge graphs, and vector retrieval.
-              </p>
-              <div className="mt-5 text-xs text-slate-400">
                 © {year} Jay Moran
               </div>
             </div>
