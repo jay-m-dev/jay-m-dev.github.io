@@ -577,7 +577,7 @@ group-hover:text-sky-200" />
           kicker="LET'S CONNECT"
           title="Contact"
         >
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4">
             <div className="glass rounded-2xl p-6">
               <div className="text-sm font-semibold text-slate-50">
                 Open to
@@ -599,17 +599,17 @@ group-hover:text-sky-200" />
                 />
               </div>
             </div>
-
-            <div className="glass rounded-2xl p-6">
-              <div className="text-sm font-semibold text-slate-50">
-                © {year} Jay Moran
-              </div>
-            </div>
           </div>
         </Section>
 
-        <div className="pb-14" />
+        <div className="pb-10" />
       </main>
+
+      <footer className="border-t border-slate-800/60 bg-slate-950/40">
+        <div className="mx-auto max-w-6xl px-5 py-6 text-xs text-slate-400">
+          © {year} Jay Moran
+        </div>
+      </footer>
     </div>
   );
 }
