@@ -11,6 +11,8 @@ import {
   Network,
   Search,
   Cpu,
+  Server,
+  Code2,
 } from "lucide-react";
 
 function useReducedMotion() {
@@ -184,6 +186,15 @@ export default function App() {
 
   const skills = useMemo(() => {
     return [
+      "FastAPI",
+      "Flask",
+      "Django",
+      "ReactJS",
+      "Python",
+      "Java",
+      "Node.js",
+      "Git",
+      "Docker",
       "Backend Engineering",
       "Healthcare Technology",
       "SQL & Data Modeling",
@@ -212,8 +223,36 @@ mission-critical operations.",
       {
         name: "Production Engineering",
         desc: "Stability, maintainability, and long-term ownership in \
-regulated environments.",
+enterprise environments.",
         tags: ["Ops", "Monitoring", "Quality"],
+      },
+    ];
+  }, []);
+
+  const featuredProjects = useMemo(() => {
+    return [
+      {
+        name: "Aliro",
+        desc: "Easy-to-use data science assistant for supervised ML with a \
+web interface, visual results, and reproducible scripts.",
+        href: "https://github.com/EpistasisLab/Aliro",
+      },
+      {
+        name: "TPOT2",
+        desc: "Tree-based Pipeline Optimization Tool (TPOT), a Python AutoML \
+tool that optimizes ML pipelines using genetic programming.",
+        href: "https://github.com/EpistasisLab/tpot2",
+      },
+      {
+        name: "AlzKB",
+        desc: "Knowledge base for AI research in Alzheimer Disease based on \
+graph databases.",
+        href: "https://github.com/EpistasisLab/AlzKB",
+      },
+      {
+        name: "AI Campus",
+        desc: "AI Campus at the Cedars-Sinai Medical Center.",
+        href: "https://cedars.nationalcampus.ai/",
       },
     ];
   }, []);
@@ -254,6 +293,9 @@ from-transparent via-sky-300/10 to-transparent" />
             </a>
             <a className="text-slate-300 hover:text-slate-50" href="#work">
               Work
+            </a>
+            <a className="text-slate-300 hover:text-slate-50" href="#projects">
+              Projects
             </a>
             <a className="text-slate-300 hover:text-slate-50" href="#contact">
               Contact
@@ -301,10 +343,10 @@ text-slate-50 md:text-5xl neon-text">
               </h1>
 
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                Senior software professional with 10+ years across regulated,
-                data-intensive environments. I build backend and data systems,
-                model complex relationships with knowledge graphs, and enable
-                semantic retrieval with vector databases.
+                Senior software engineer with 10+ years building reliable
+                enterprise applications. I deliver backend systems, APIs, and
+                data platforms, including private ERP and Point of Sale
+                workflows.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -353,6 +395,30 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
           <div className="grid gap-4 md:grid-cols-2">
             <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2">
+                <Server className="h-5 w-5 text-sky-300" />
+                <div className="text-sm font-semibold text-slate-50">
+                  Enterprise systems
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                Private ERP and Point of Sale platforms with reliable
+                workflows, integrations, and operational accuracy.
+              </p>
+            </div>
+            <div className="glass rounded-2xl p-6">
+              <div className="flex items-center gap-2">
+                <Code2 className="h-5 w-5 text-violet-300" />
+                <div className="text-sm font-semibold text-slate-50">
+                  Software engineering
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                Degree-trained engineer focused on clean architecture, APIs,
+                and maintainable applications.
+              </p>
+            </div>
+            <div className="glass rounded-2xl p-6">
+              <div className="flex items-center gap-2">
                 <Database className="h-5 w-5 text-sky-300" />
                 <div className="text-sm font-semibold text-slate-50">
                   Data platforms
@@ -392,6 +458,31 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
         </Section>
 
         <Section
+          id="education"
+          kicker="EDUCATION"
+          title="Academic background"
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="glass rounded-2xl p-6">
+              <div className="text-sm font-semibold text-slate-50">
+                M.S. in Software Engineering
+              </div>
+              <div className="mt-2 text-sm text-slate-300">
+                California State University, Fullerton · 2019
+              </div>
+            </div>
+            <div className="glass rounded-2xl p-6">
+              <div className="text-sm font-semibold text-slate-50">
+                B.S. in Information Technology
+              </div>
+              <div className="mt-2 text-sm text-slate-300">
+                Western Governors University · 2015
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        <Section
           id="work"
           kicker="HIGHLIGHTS"
           title="Selected work themes"
@@ -424,18 +515,49 @@ hover:border-sky-400/30 hover:shadow-neon border border-slate-800/60"
             </div>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li>
-                • Cedars-Sinai: biomedical research + data workflows; graphs
-                (Neo4j, Memgraph) and vectors for semantic retrieval
+                • Data science assistant: full-stack ML product built with
+                Node.js, Python, and React, delivering assistant workflows
+                over learned models
+              </li>
+              <li>
+                • Clinical application: vision AI models to support prediction
+                of surgical procedures in real-world workflows
               </li>
               <li>
                 • Enterprise platforms: long-term ownership, stability, and
                 production support across large systems
               </li>
-              <li>
-                • Foundation: Linux, SQL, backend development, disciplined
-                engineering practices
-              </li>
             </ul>
+          </div>
+        </Section>
+
+        <Section
+          id="projects"
+          kicker="PROJECTS"
+          title="Selected projects"
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {featuredProjects.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group glass rounded-2xl p-6 border border-slate-800/60 \
+transition hover:border-sky-400/30 hover:shadow-neon"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <div className="text-sm font-semibold text-slate-50">
+                    {p.name}
+                  </div>
+                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 \
+group-hover:text-sky-200" />
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                  {p.desc}
+                </p>
+              </a>
+            ))}
           </div>
         </Section>
 
@@ -473,7 +595,7 @@ hover:border-sky-400/30 hover:shadow-neon border border-slate-800/60"
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
                 Senior software engineer building secure, reliable systems in
-                regulated environments, with hands-on experience across SQL
+                enterprise environments, with hands-on experience across SQL
                 platforms, knowledge graphs, and vector retrieval.
               </p>
               <div className="mt-5 text-xs text-slate-400">
