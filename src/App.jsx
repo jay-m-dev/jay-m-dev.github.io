@@ -5,7 +5,6 @@ import {
   ArrowUpRight,
   Github,
   Linkedin,
-  Mail,
   Shield,
   Database,
   Network,
@@ -186,76 +185,242 @@ export default function App() {
 
   const skills = useMemo(() => {
     return [
-      "FastAPI",
-      "Flask",
-      "Django",
-      "ReactJS",
+      "Backend Engineering",
+      "API Design (REST)",
+      "System Design",
+      "Distributed Systems",
+      "Architecture Reviews",
+      "Mentorship",
+      "Incident Management",
+      "Knowledge Graphs",
+      "Vector Databases",
+      "Semantic Search",
+      "SQL & Data Modeling",
+      "PostgreSQL",
+      "Neo4j",
+      "Memgraph",
+      "Caching",
+      "Message Queues",
+      "Authentication & Authorization",
       "Python",
+      "FastAPI",
       "Java",
       "Node.js",
+      "React",
+      "TypeScript",
       "Git",
       "Docker",
-      "Backend Engineering",
-      "Healthcare Technology",
-      "SQL & Data Modeling",
-      "Knowledge Graphs (Neo4j, Memgraph)",
-      "Vector Search / Similarity Retrieval",
       "Linux",
-      "System Reliability",
-      "Pragmatic Architecture",
+      "CI/CD",
+      "Observability",
+      "Performance Tuning",
+      "Testing",
+      "Roadmapping",
     ];
   }, []);
 
   const projects = useMemo(() => {
     return [
       {
-        name: "Graph + Vector Data Workflows",
-        desc: "Knowledge-graph modeling plus semantic retrieval for research \
-systems.",
-        tags: ["Neo4j", "Memgraph", "Vectors", "Search"],
-        href: "https://alzkb.ai",
+        name: "Biomedical Research Platforms",
+        desc: "Knowledge graph modeling, semantic search, and reliable data \
+systems that support biomedical research workflows.",
+        tags: ["Knowledge Graphs", "Vector Search", "Research Systems"],
+        href: "https://www.linkedin.com/in/moran-jay/",
+      },
+      {
+        name: "Enterprise Retail Operations",
+        desc: "Long-term ownership of enterprise systems supporting retail \
+and operational reliability.",
+        tags: ["Enterprise Systems", "Operations", "Reliability"],
+        href: "https://github.com/jay-m-dev",
       },
       {
         name: "Data Platforms & Reporting",
-        desc: "SQL-driven pipelines and systems supporting analytics and \
-mission-critical operations.",
-        tags: ["SQL", "Data", "Reliability"],
-        href: "https://github.com/EpistasisLab/Aliro",
-      },
-      {
-        name: "Production Engineering",
-        desc: "Stability, maintainability, and long-term ownership in \
-enterprise environments.",
-        tags: ["Ops", "Monitoring", "Quality"],
-        href: "https://www.linkedin.com/in/moran-jay/",
+        desc: "SQL-driven pipelines and reporting systems that support \
+decision-making and operational integrity.",
+        tags: ["SQL", "Pipelines", "Reporting"],
+        href: "https://github.com/jay-m-dev",
       },
     ];
   }, []);
 
-  const featuredProjects = useMemo(() => {
+  const experience = useMemo(() => {
     return [
       {
-        name: "Aliro",
-        desc: "Easy-to-use data science assistant for supervised ML with a \
-web interface, visual results, and reproducible scripts.",
-        href: "https://github.com/EpistasisLab/Aliro",
+        company: "Cedars-Sinai",
+        title: "Senior Programmer Analyst",
+        period: "Mar 2024 – Present · Los Angeles Metropolitan Area",
+        bullets: [
+          "Design, develop, and maintain software systems supporting \
+biomedical research and data workflows.",
+          "Collaborate with researchers, analysts, and IT teams to deliver \
+reliable, production-ready solutions.",
+          "Model complex biomedical relationships using knowledge graphs \
+(Neo4j, Memgraph).",
+          "Integrate vector databases for semantic search and data-driven \
+analysis.",
+          "Support SQL-based analytics and reporting; improve stability, \
+performance, and maintainability across internal platforms.",
+        ],
       },
       {
-        name: "TPOT2",
-        desc: "Tree-based Pipeline Optimization Tool (TPOT), a Python AutoML \
-tool that optimizes ML pipelines using genetic programming.",
-        href: "https://github.com/EpistasisLab/tpot2",
+        company: "Cedars-Sinai",
+        title: "Programmer Analyst",
+        period: "Apr 2022 – Mar 2024 · Los Angeles Metropolitan Area",
+        bullets: [
+          "Supported development and maintenance of internal research and \
+clinical software systems.",
+          "Implemented enhancements and bug fixes across existing \
+applications.",
+          "Assisted data analysis workflows and backend system support.",
+          "Partnered with senior engineers to deliver new features and \
+integrations.",
+        ],
       },
       {
-        name: "AlzKB",
-        desc: "Knowledge base for AI research in Alzheimer Disease based on \
-graph databases.",
-        href: "https://github.com/EpistasisLab/AlzKB",
+        company: "Curacao",
+        title: "Programmer Analyst",
+        period: "Nov 2014 – Apr 2022 · Los Angeles, CA",
+        bullets: [
+          "Maintained and enhanced enterprise software systems supporting \
+retail and operations.",
+          "Worked across development, data, and production support \
+responsibilities.",
+          "Built long-term ownership practices focused on stability and \
+reliability.",
+          "Progressed from operational roles into full software \
+responsibilities.",
+        ],
       },
       {
-        name: "AI Campus",
-        desc: "AI Campus at the Cedars-Sinai Medical Center.",
-        href: "https://cedars.nationalcampus.ai/",
+        company: "AccuPOS",
+        title: "Software Engineer",
+        period: "Feb 2014 – Nov 2014",
+        bullets: [
+          "Developed and supported point-of-sale software workflows.",
+          "Partnered with support teams to resolve production issues and \
+deliver fixes.",
+        ],
+      },
+      {
+        company: "Earlier roles",
+        title: "Technical Support Specialist · Project Coordinator · \
+Call Center Supervisor",
+        period: "Mar 2011 – Feb 2014",
+        bullets: [
+          "Built foundations in customer support, operations, and \
+systems reliability before transitioning into full-time engineering.",
+        ],
+      },
+    ];
+  }, []);
+
+  const caseStudies = useMemo(() => {
+    return [
+      {
+        name: "Biomedical Knowledge Graph + Semantic Search",
+        problem:
+          "Enable researchers to explore complex biomedical relationships and \
+discover relevant data efficiently.",
+        approach: [
+          "Modeled biomedical entities and relationships with knowledge \
+graphs (Neo4j, Memgraph).",
+          "Integrated vector databases to support semantic search and \
+similarity queries.",
+          "Partnered with researchers and IT stakeholders to deliver \
+production-ready workflows.",
+        ],
+        impact: [
+          "Enabled semantic discovery and data-driven analysis for research \
+teams.",
+          "Improved reliability and maintainability of internal research \
+platforms.",
+          "Supported analytics and reporting with durable SQL-based systems.",
+        ],
+        stack: ["Neo4j", "Memgraph", "Vector DBs", "SQL"],
+        scale: "Biomedical research data workflows",
+        href: "https://www.linkedin.com/in/moran-jay",
+      },
+      {
+        name: "Research & Clinical Systems Support",
+        problem:
+          "Maintain reliable internal systems while delivering new features \
+for research and clinical workflows.",
+        approach: [
+          "Implemented enhancements and bug fixes across legacy \
+applications.",
+          "Supported data analysis workflows and backend system operations.",
+          "Collaborated with senior engineers to deliver integrations and \
+feature updates.",
+        ],
+        impact: [
+          "Improved stability and responsiveness of internal systems.",
+          "Reduced operational friction for research stakeholders.",
+          "Delivered production-ready updates with cross-functional \
+coordination.",
+        ],
+        stack: ["Backend Systems", "SQL", "Integrations"],
+        scale: "Internal research and clinical teams",
+        href: "https://github.com/jay-m-dev",
+      },
+      {
+        name: "Enterprise Retail Operations Platform",
+        problem:
+          "Keep enterprise retail operations running on stable, reliable \
+software systems.",
+        approach: [
+          "Maintained and enhanced systems across development and production \
+support.",
+          "Collaborated across operations, data, and support teams.",
+          "Built long-term ownership practices for stability and reliability.",
+        ],
+        impact: [
+          "Improved operational continuity for day-to-day retail workflows.",
+          "Reduced recurring issues through durable fixes and maintenance.",
+          "Supported teams with dependable systems and long-term ownership.",
+        ],
+        stack: ["Enterprise Systems", "Operations", "Support"],
+        scale: "Retail and operations workflows",
+        href: "https://github.com/jay-m-dev",
+      },
+    ];
+  }, []);
+
+  const leadership = useMemo(() => {
+    return [
+      {
+        title: "Technical Leadership",
+        bullets: [
+          "System design decisions focused on reliability and \
+maintainability.",
+          "Translate complex requirements into production-ready solutions.",
+          "Stability and performance improvements across internal platforms.",
+        ],
+      },
+      {
+        title: "Team Enablement",
+        bullets: [
+          "Cross-functional collaboration with researchers, analysts, and IT \
+teams.",
+          "Production support practices that reduce operational risk.",
+          "Clear documentation and handoffs that keep systems dependable.",
+        ],
+      },
+    ];
+  }, []);
+
+  const openSourceProjects = useMemo(() => {
+    return [
+      {
+        name: "GitHub Portfolio",
+        desc: "Public repositories, code samples, and ongoing work.",
+        href: "https://github.com/jay-m-dev",
+      },
+      {
+        name: "Personal Site",
+        desc: "This portfolio site and related public work.",
+        href: "https://jay-m-dev.github.io/",
       },
     ];
   }, []);
@@ -294,11 +459,26 @@ from-transparent via-sky-300/10 to-transparent" />
             <a className="text-slate-300 hover:text-slate-50" href="#skills">
               Skills
             </a>
+            <a className="text-slate-300 hover:text-slate-50" href="#experience">
+              Experience
+            </a>
             <a className="text-slate-300 hover:text-slate-50" href="#work">
               Work
             </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#projects">
-              Projects
+            <a className="text-slate-300 hover:text-slate-50" href="#leadership">
+              Leadership
+            </a>
+            <a
+              className="text-slate-300 hover:text-slate-50"
+              href="#case-studies"
+            >
+              Case Studies
+            </a>
+            <a
+              className="text-slate-300 hover:text-slate-50"
+              href="#open-source"
+            >
+              Public work
             </a>
             <a className="text-slate-300 hover:text-slate-50" href="#contact">
               Contact
@@ -336,20 +516,23 @@ border border-slate-700/60 bg-slate-950/40 px-3 py-1 text-xs \
 text-slate-200">
                 <span className="h-1.5 w-1.5 rounded-full bg-sky-300 \
 animate-glow" />
-                Healthcare • Data Platforms • Graph + Vector Search
+                Healthcare Technology • Data Platforms • Reliability Engineering
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight \
 text-slate-50 md:text-5xl neon-text">
-                Building reliable systems for research and mission-critical
-                data.
+                Building reliable backend systems for healthcare, data
+                platforms, and enterprise operations.
               </h1>
 
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                Senior software engineer with 10+ years building reliable
-                enterprise applications. I deliver backend systems, APIs, and
-                data platforms, including private ERP and Point of Sale
-                workflows.
+                Senior software professional with 10+ years of experience
+                building, supporting, and modernizing systems across
+                healthcare, finance, and large-scale enterprise environments.
+                I deliver backend services, data workflows, and knowledge
+                graph solutions, collaborating with cross-functional teams to
+                translate complex requirements into reliable, maintainable
+                software.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -373,18 +556,21 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               <Pill
                 icon={Network}
-                title="Knowledge Graphs"
-                text="Neo4j → Memgraph, relationship modeling, Cypher queries."
+                title="Backend APIs"
+                text="Clean interfaces, predictable behavior, and durable \
+service contracts."
               />
               <Pill
                 icon={Search}
-                title="Vector Retrieval"
-                text="Similarity search, semantic retrieval, hybrid pipelines."
+                title="Operational Data"
+                text="Reliable reporting pipelines and data models that teams \
+trust."
               />
               <Pill
                 icon={Shield}
-                title="Regulated Systems"
-                text="Correctness, stability, ownership, production discipline."
+                title="Reliability"
+                text="Stability, monitoring, and production ownership in \
+enterprise environments."
               />
             </div>
           </div>
@@ -404,8 +590,8 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Private ERP and Point of Sale platforms with reliable
-                workflows, integrations, and operational accuracy.
+                Healthcare research platforms and enterprise systems with
+                reliable workflows, integrations, and operational accuracy.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
@@ -437,12 +623,12 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
               <div className="flex items-center gap-2">
                 <Cpu className="h-5 w-5 text-violet-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Graph + vector search
+                  Platform engineering
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Knowledge graphs for relationship-rich domains and vector
-                databases for semantic retrieval in research-focused systems.
+                Practical architecture, performance tuning, and systems that
+                are easy to operate and extend.
               </p>
             </div>
           </div>
@@ -482,6 +668,30 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
                 Western Governors University · 2015
               </div>
             </div>
+          </div>
+        </Section>
+
+        <Section
+          id="experience"
+          kicker="EXPERIENCE"
+          title="Work history"
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {experience.map((job) => (
+              <div key={`${job.company}-${job.title}`} className="glass rounded-2xl p-6">
+                <div className="text-sm font-semibold text-slate-50">
+                  {job.title}
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-widest text-slate-400">
+                  {job.company} · {job.period}
+                </div>
+                <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                  {job.bullets.map((b) => (
+                    <li key={b}>• {b}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </Section>
 
@@ -526,29 +736,108 @@ group-hover:text-sky-200" />
             </div>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li>
-                • Data science assistant: full-stack ML product built with
-                Node.js, Python, and React, delivering assistant workflows
-                over learned models
+                • Biomedical research systems: knowledge graphs, semantic
+                search, and reliable data workflows
               </li>
               <li>
-                • Clinical application: vision AI models to support prediction
-                of surgical procedures in real-world workflows
+                • Enterprise retail operations: long-term system ownership
+                with stability and operational continuity
               </li>
               <li>
-                • Enterprise platforms: long-term ownership, stability, and
-                production support across large systems
+                • Data platforms: SQL-driven analytics, reporting, and
+                production support
               </li>
             </ul>
           </div>
         </Section>
 
         <Section
-          id="projects"
-          kicker="PROJECTS"
-          title="Selected projects"
+          id="leadership"
+          kicker="LEADERSHIP"
+          title="Lead engineer signals"
         >
           <div className="grid gap-4 md:grid-cols-2">
-            {featuredProjects.map((p) => (
+            {leadership.map((item) => (
+              <div key={item.title} className="glass rounded-2xl p-6">
+                <div className="text-sm font-semibold text-slate-50">
+                  {item.title}
+                </div>
+                <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                  {item.bullets.map((b) => (
+                    <li key={b}>• {b}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section
+          id="case-studies"
+          kicker="CASE STUDIES"
+          title="Backend engineering impact"
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {caseStudies.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group glass rounded-2xl p-6 border border-slate-800/60 \
+transition hover:border-sky-400/30 hover:shadow-neon"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <div className="text-sm font-semibold text-slate-50">
+                    {p.name}
+                  </div>
+                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 \
+group-hover:text-sky-200" />
+                </div>
+                <div className="mt-3 text-sm text-slate-300">
+                  <div className="text-xs uppercase tracking-widest text-slate-400">
+                    Problem
+                  </div>
+                  <p className="mt-2 leading-relaxed">{p.problem}</p>
+                </div>
+                <div className="mt-4 text-sm text-slate-300">
+                  <div className="text-xs uppercase tracking-widest text-slate-400">
+                    Approach
+                  </div>
+                  <ul className="mt-2 space-y-2">
+                    {p.approach.map((b) => (
+                      <li key={b}>• {b}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-4 text-sm text-slate-300">
+                  <div className="text-xs uppercase tracking-widest text-slate-400">
+                    Impact
+                  </div>
+                  <ul className="mt-2 space-y-2">
+                    {p.impact.map((b) => (
+                      <li key={b}>• {b}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.stack.map((t) => (
+                    <Tag key={t}>{t}</Tag>
+                  ))}
+                  <Tag>{p.scale}</Tag>
+                </div>
+              </a>
+            ))}
+          </div>
+        </Section>
+
+        <Section
+          id="open-source"
+          kicker="PUBLIC WORK"
+          title="Public work"
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {openSourceProjects.map((p) => (
               <a
                 key={p.name}
                 href={p.href}
@@ -567,6 +856,16 @@ group-hover:text-sky-200" />
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   {p.desc}
                 </p>
+                {p.contribution ? (
+                  <>
+                    <div className="mt-3 text-xs uppercase tracking-widest text-slate-400">
+                      Contribution
+                    </div>
+                    <p className="mt-2 text-sm text-slate-300">
+                      {p.contribution}
+                    </p>
+                  </>
+                ) : null}
               </a>
             ))}
           </div>
@@ -583,19 +882,15 @@ group-hover:text-sky-200" />
                 Open to
               </div>
               <p className="mt-3 text-sm text-slate-300">
-                Senior backend / data platform roles, healthcare tech, graph
-                + vector search systems, and reliability-focused engineering.
+                Senior backend / platform roles in healthcare technology,
+                data platforms, and enterprise systems that value reliability
+                and production ownership.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <LinkBtn
                   href="https://www.linkedin.com/in/moran-jay"
                   icon={Linkedin}
                   label="linkedin.com/in/moran-jay"
-                />
-                <LinkBtn
-                  href="https://github.com/jay-m-dev"
-                  icon={Github}
-                  label="github.com/jay-m-dev"
                 />
               </div>
             </div>
