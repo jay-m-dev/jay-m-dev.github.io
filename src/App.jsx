@@ -222,6 +222,7 @@ export default function App() {
     return [
       { id: "focus", label: "Focus" },
       { id: "skills", label: "Skills" },
+      { id: "education", label: "Education" },
       { id: "experience", label: "Experience" },
       { id: "work", label: "Work" },
       { id: "approach", label: "Approach" },
@@ -467,11 +468,6 @@ export default function App() {
         name: "GitHub Portfolio",
         desc: "Public repositories and code samples that show current work and implementation style.",
         href: "https://github.com/jay-m-dev",
-      },
-      {
-        name: "Personal Site",
-        desc: "Portfolio site summarizing experience, engineering focus, and contact information.",
-        href: "https://jay-m-dev.github.io/",
       },
     ];
   }, []);
