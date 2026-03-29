@@ -189,7 +189,6 @@ export default function App() {
       "Service Integrations",
       "Distributed Systems",
       "Architecture Reviews",
-      "Technical Leadership",
       "Mentorship",
       "Production Support",
       "Incident Response",
@@ -354,10 +353,10 @@ export default function App() {
     ];
   }, []);
 
-  const leadership = useMemo(() => {
+  const approach = useMemo(() => {
     return [
       {
-        title: "Technical Execution",
+        title: "Execution",
         bullets: [
           "Break ambiguous requirements into deliverable increments.",
           "Favor maintainable designs over unnecessary complexity.",
@@ -365,7 +364,7 @@ export default function App() {
         ],
       },
       {
-        title: "Team Collaboration",
+        title: "Collaboration",
         bullets: [
           "Work effectively with product, analysts, support, and domain stakeholders.",
           "Communicate tradeoffs clearly during delivery and incident response.",
@@ -426,8 +425,8 @@ export default function App() {
             <a className="text-slate-300 hover:text-slate-50" href="#work">
               Work
             </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#leadership">
-              Leadership
+            <a className="text-slate-300 hover:text-slate-50" href="#approach">
+              Approach
             </a>
             <a
               className="text-slate-300 hover:text-slate-50"
@@ -697,12 +696,12 @@ export default function App() {
         </Section>
 
         <Section
-          id="leadership"
-          kicker="LEADERSHIP"
+          id="approach"
+          kicker="APPROACH"
           title="How I work"
         >
           <div className="grid gap-4 md:grid-cols-2">
-            {leadership.map((item) => (
+            {approach.map((item) => (
               <div key={item.title} className="glass rounded-2xl p-6">
                 <div className="text-sm font-semibold text-slate-50">
                   {item.title}
