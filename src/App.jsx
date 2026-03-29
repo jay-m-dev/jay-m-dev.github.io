@@ -139,8 +139,7 @@ function Pill({ icon: Icon, title, text }) {
 
 function Tag({ children }) {
   return (
-    <span className="rounded-full border border-slate-700/60 bg-slate-900/40 \
-px-3 py-1 text-xs text-slate-200">
+    <span className="rounded-full border border-slate-700/60 bg-slate-900/40 px-3 py-1 text-xs text-slate-200">
       {children}
     </span>
   );
@@ -166,9 +165,7 @@ function LinkBtn({ href, icon: Icon, label }) {
   return (
     <a
       href={href}
-      className="group inline-flex items-center gap-2 rounded-xl \
-border border-slate-700/60 bg-slate-950/40 px-4 py-2 text-sm \
-text-slate-100 transition hover:border-sky-400/40 hover:shadow-neon"
+      className="group inline-flex items-center gap-2 rounded-xl border border-slate-700/60 bg-slate-950/40 px-4 py-2 text-sm text-slate-100 transition hover:border-sky-400/40 hover:shadow-neon"
       target="_blank"
       rel="noreferrer"
     >
@@ -186,28 +183,28 @@ export default function App() {
   const skills = useMemo(() => {
     return [
       "Backend Engineering",
-      "API Design (REST)",
+      "Platform Engineering",
+      "API Design",
       "System Design",
+      "Service Integrations",
       "Distributed Systems",
       "Architecture Reviews",
+      "Technical Leadership",
       "Mentorship",
-      "Incident Management",
-      "Knowledge Graphs",
-      "Vector Databases",
-      "Semantic Search",
+      "Production Support",
+      "Incident Response",
       "SQL & Data Modeling",
       "PostgreSQL",
-      "Neo4j",
-      "Memgraph",
       "Caching",
       "Message Queues",
       "Authentication & Authorization",
+      "JavaScript",
+      "TypeScript",
       "Python",
       "FastAPI",
       "Java",
       "Node.js",
       "React",
-      "TypeScript",
       "Git",
       "Docker",
       "Linux",
@@ -215,31 +212,28 @@ export default function App() {
       "Observability",
       "Performance Tuning",
       "Testing",
-      "Roadmapping",
+      "Agile Delivery",
     ];
   }, []);
 
   const projects = useMemo(() => {
     return [
       {
-        name: "Biomedical Research Platforms",
-        desc: "Knowledge graph modeling, semantic search, and reliable data \
-systems that support biomedical research workflows.",
-        tags: ["Knowledge Graphs", "Vector Search", "Research Systems"],
+        name: "Backend Services & Integrations",
+        desc: "APIs, integrations, and background workflows that connect systems and keep business processes moving reliably.",
+        tags: ["APIs", "Integrations", "Service Ownership"],
         href: "https://www.linkedin.com/in/moran-jay/",
       },
       {
-        name: "Enterprise Retail Operations",
-        desc: "Long-term ownership of enterprise systems supporting retail \
-and operational reliability.",
-        tags: ["Enterprise Systems", "Operations", "Reliability"],
+        name: "Platform Reliability & Support",
+        desc: "Long-term ownership of production systems with monitoring, troubleshooting, and steady modernization.",
+        tags: ["Reliability", "Operations", "Production Support"],
         href: "https://github.com/jay-m-dev",
       },
       {
-        name: "Data Platforms & Reporting",
-        desc: "SQL-driven pipelines and reporting systems that support \
-decision-making and operational integrity.",
-        tags: ["SQL", "Pipelines", "Reporting"],
+        name: "Data & Workflow Systems",
+        desc: "SQL-backed applications, reporting pipelines, and internal tools that support day-to-day operations and decision-making.",
+        tags: ["SQL", "Reporting", "Internal Tools"],
         href: "https://github.com/jay-m-dev",
       },
     ];
@@ -252,16 +246,11 @@ decision-making and operational integrity.",
         title: "Senior Programmer Analyst",
         period: "Mar 2024 – Present · Los Angeles Metropolitan Area",
         bullets: [
-          "Design, develop, and maintain software systems supporting \
-biomedical research and data workflows.",
-          "Collaborate with researchers, analysts, and IT teams to deliver \
-reliable, production-ready solutions.",
-          "Model complex biomedical relationships using knowledge graphs \
-(Neo4j, Memgraph).",
-          "Integrate vector databases for semantic search and data-driven \
-analysis.",
-          "Support SQL-based analytics and reporting; improve stability, \
-performance, and maintainability across internal platforms.",
+          "Design, build, and maintain internal applications, backend services, and data workflows used by research and operational teams.",
+          "Own delivery from requirements through implementation, testing, deployment, and production support.",
+          "Improve reliability, maintainability, and performance across existing platforms.",
+          "Build search and data access capabilities, including graph and vector-backed solutions where they fit the problem.",
+          "Partner with stakeholders, analysts, and engineers to translate complex workflows into durable software.",
         ],
       },
       {
@@ -269,13 +258,10 @@ performance, and maintainability across internal platforms.",
         title: "Programmer Analyst",
         period: "Apr 2022 – Mar 2024 · Los Angeles Metropolitan Area",
         bullets: [
-          "Supported development and maintenance of internal research and \
-clinical software systems.",
-          "Implemented enhancements and bug fixes across existing \
-applications.",
-          "Assisted data analysis workflows and backend system support.",
-          "Partnered with senior engineers to deliver new features and \
-integrations.",
+          "Supported development and maintenance of internal applications and backend systems.",
+          "Implemented enhancements, integrations, and bug fixes across existing platforms.",
+          "Assisted analytics workflows, SQL reporting, and day-to-day production support.",
+          "Worked with senior engineers to deliver features while learning system architecture and operational constraints.",
         ],
       },
       {
@@ -283,14 +269,10 @@ integrations.",
         title: "Programmer Analyst",
         period: "Nov 2014 – Apr 2022 · Los Angeles, CA",
         bullets: [
-          "Maintained and enhanced enterprise software systems supporting \
-retail and operations.",
-          "Worked across development, data, and production support \
-responsibilities.",
-          "Built long-term ownership practices focused on stability and \
-reliability.",
-          "Progressed from operational roles into full software \
-responsibilities.",
+          "Maintained and enhanced enterprise software supporting operations, fulfillment, and back-office workflows.",
+          "Worked across application development, data support, and production issue resolution.",
+          "Improved stability through durable fixes, monitoring, and long-term ownership.",
+          "Progressed from operational roles into full software delivery responsibilities.",
         ],
       },
       {
@@ -298,19 +280,16 @@ responsibilities.",
         title: "Software Engineer",
         period: "Feb 2014 – Nov 2014",
         bullets: [
-          "Developed and supported point-of-sale software workflows.",
-          "Partnered with support teams to resolve production issues and \
-deliver fixes.",
+          "Developed and supported transactional business software workflows.",
+          "Partnered with support teams to resolve production issues and deliver maintainable fixes.",
         ],
       },
       {
         company: "Earlier roles",
-        title: "Technical Support Specialist · Project Coordinator · \
-Call Center Supervisor",
+        title: "Technical Support Specialist · Project Coordinator · Call Center Supervisor",
         period: "Mar 2011 – Feb 2014",
         bullets: [
-          "Built foundations in customer support, operations, and \
-systems reliability before transitioning into full-time engineering.",
+          "Built foundations in customer support, operations, and systems reliability before transitioning into full-time engineering.",
         ],
       },
     ];
@@ -319,69 +298,57 @@ systems reliability before transitioning into full-time engineering.",
   const caseStudies = useMemo(() => {
     return [
       {
-        name: "Biomedical Knowledge Graph + Semantic Search",
+        name: "Search & Data Discovery Platform",
         problem:
-          "Enable researchers to explore complex biomedical relationships and \
-discover relevant data efficiently.",
+          "Help internal users find connected information quickly without relying on brittle manual lookup workflows.",
         approach: [
-          "Modeled biomedical entities and relationships with knowledge \
-graphs (Neo4j, Memgraph).",
-          "Integrated vector databases to support semantic search and \
-similarity queries.",
-          "Partnered with researchers and IT stakeholders to deliver \
-production-ready workflows.",
+          "Modeled relationships in graph databases when relational structures were too rigid for the use case.",
+          "Integrated vector and search capabilities to improve retrieval and relevance.",
+          "Delivered the solution as part of maintained internal workflows, not as a standalone experiment.",
         ],
         impact: [
-          "Enabled semantic discovery and data-driven analysis for research \
-teams.",
-          "Improved reliability and maintainability of internal research \
-platforms.",
-          "Supported analytics and reporting with durable SQL-based systems.",
+          "Reduced time spent finding related information across systems.",
+          "Expanded what teams could answer with existing data.",
+          "Showed the ability to choose non-default tooling only when the problem justified it.",
         ],
-        stack: ["Neo4j", "Memgraph", "Vector DBs", "SQL"],
-        scale: "Biomedical research data workflows",
+        stack: ["Search", "Graph Data", "SQL", "Python"],
+        scale: "Internal data-intensive workflows",
         href: "https://www.linkedin.com/in/moran-jay",
       },
       {
-        name: "Research & Clinical Systems Support",
+        name: "Legacy Application Enhancement & Support",
         problem:
-          "Maintain reliable internal systems while delivering new features \
-for research and clinical workflows.",
+          "Keep business-critical internal applications stable while delivering incremental features and integrations.",
         approach: [
-          "Implemented enhancements and bug fixes across legacy \
-applications.",
-          "Supported data analysis workflows and backend system operations.",
-          "Collaborated with senior engineers to deliver integrations and \
-feature updates.",
+          "Worked inside existing codebases with careful, low-risk changes.",
+          "Paired feature delivery with bug fixes, SQL updates, and operational support.",
+          "Collaborated with analysts and end users to clarify requirements.",
         ],
         impact: [
-          "Improved stability and responsiveness of internal systems.",
-          "Reduced operational friction for research stakeholders.",
-          "Delivered production-ready updates with cross-functional \
-coordination.",
+          "Improved stability and responsiveness in day-to-day use.",
+          "Reduced recurring support issues with durable fixes.",
+          "Delivered changes without disrupting teams that depended on the software.",
         ],
-        stack: ["Backend Systems", "SQL", "Integrations"],
-        scale: "Internal research and clinical teams",
+        stack: ["Maintenance", "SQL", "Integrations"],
+        scale: "Production internal systems",
         href: "https://github.com/jay-m-dev",
       },
       {
-        name: "Enterprise Retail Operations Platform",
+        name: "Enterprise Operations Reliability",
         problem:
-          "Keep enterprise retail operations running on stable, reliable \
-software systems.",
+          "Support high-volume operational workflows that depend on software staying predictable under daily use.",
         approach: [
-          "Maintained and enhanced systems across development and production \
-support.",
-          "Collaborated across operations, data, and support teams.",
-          "Built long-term ownership practices for stability and reliability.",
+          "Maintained core applications and support processes over multiple years.",
+          "Balanced development work with troubleshooting and production ownership.",
+          "Focused on maintainable fixes instead of short-term patches.",
         ],
         impact: [
-          "Improved operational continuity for day-to-day retail workflows.",
-          "Reduced recurring issues through durable fixes and maintenance.",
-          "Supported teams with dependable systems and long-term ownership.",
+          "Improved continuity for operations teams.",
+          "Built trust through consistent delivery and support.",
+          "Developed depth in owning software beyond initial implementation.",
         ],
-        stack: ["Enterprise Systems", "Operations", "Support"],
-        scale: "Retail and operations workflows",
+        stack: ["Enterprise Apps", "Support", "Reliability"],
+        scale: "Long-lived operational systems",
         href: "https://github.com/jay-m-dev",
       },
     ];
@@ -390,21 +357,19 @@ support.",
   const leadership = useMemo(() => {
     return [
       {
-        title: "Technical Leadership",
+        title: "Technical Execution",
         bullets: [
-          "System design decisions focused on reliability and \
-maintainability.",
-          "Translate complex requirements into production-ready solutions.",
-          "Stability and performance improvements across internal platforms.",
+          "Break ambiguous requirements into deliverable increments.",
+          "Favor maintainable designs over unnecessary complexity.",
+          "Balance new work with operational risk, testing, and supportability.",
         ],
       },
       {
-        title: "Team Enablement",
+        title: "Team Collaboration",
         bullets: [
-          "Cross-functional collaboration with researchers, analysts, and IT \
-teams.",
-          "Production support practices that reduce operational risk.",
-          "Clear documentation and handoffs that keep systems dependable.",
+          "Work effectively with product, analysts, support, and domain stakeholders.",
+          "Communicate tradeoffs clearly during delivery and incident response.",
+          "Document decisions and hand off context so systems remain sustainable.",
         ],
       },
     ];
@@ -414,12 +379,12 @@ teams.",
     return [
       {
         name: "GitHub Portfolio",
-        desc: "Public repositories, code samples, and ongoing work.",
+        desc: "Public repositories and code samples that show current work and implementation style.",
         href: "https://github.com/jay-m-dev",
       },
       {
         name: "Personal Site",
-        desc: "This portfolio site and related public work.",
+        desc: "Portfolio site summarizing experience, engineering focus, and contact information.",
         href: "https://jay-m-dev.github.io/",
       },
     ];
@@ -431,16 +396,12 @@ teams.",
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-40" />
       <div className="noise absolute inset-0" />
 
-      <header className="sticky top-0 z-40 border-b border-slate-800/60 \
-bg-slate-950/35 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between \
-px-5 py-3">
+      <header className="sticky top-0 z-40 border-b border-slate-800/60 bg-slate-950/35 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
           <a href="#top" className="flex items-center gap-3">
-            <div className="relative h-9 w-9 overflow-hidden rounded-xl \
-border border-slate-700/60 bg-slate-950/50">
+            <div className="relative h-9 w-9 overflow-hidden rounded-xl border border-slate-700/60 bg-slate-950/50">
               <div className="absolute inset-0 ring-grad opacity-90" />
-              <div className="absolute inset-0 animate-scan bg-gradient-to-b \
-from-transparent via-sky-300/10 to-transparent" />
+              <div className="absolute inset-0 animate-scan bg-gradient-to-b from-transparent via-sky-300/10 to-transparent" />
             </div>
             <div className="leading-tight">
               <div className="text-sm font-semibold text-slate-50">
@@ -501,8 +462,7 @@ from-transparent via-sky-300/10 to-transparent" />
       </header>
 
       <main id="top" className="relative mx-auto max-w-6xl px-5">
-        <section className="relative overflow-hidden rounded-3xl border \
-border-slate-800/60 bg-slate-950/40 px-6 py-14 shadow-neon mt-8">
+        <section className="relative overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-950/40 px-6 py-14 shadow-neon mt-8">
           <Particles />
           <div className="relative">
             <motion.div
@@ -511,28 +471,22 @@ border-slate-800/60 bg-slate-950/40 px-6 py-14 shadow-neon mt-8">
               transition={{ duration: 0.6 }}
               className="max-w-3xl"
             >
-              <div className="inline-flex items-center gap-2 rounded-full \
-border border-slate-700/60 bg-slate-950/40 px-3 py-1 text-xs \
-text-slate-200">
-                <span className="h-1.5 w-1.5 rounded-full bg-sky-300 \
-animate-glow" />
-                Healthcare Technology • Data Platforms • Reliability Engineering
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-950/40 px-3 py-1 text-xs text-slate-200">
+                <span className="h-1.5 w-1.5 rounded-full bg-sky-300 animate-glow" />
+                Backend Engineering • Platform Reliability • Software Delivery
               </div>
 
-              <h1 className="mt-5 text-4xl font-semibold tracking-tight \
-text-slate-50 md:text-5xl neon-text">
-                Building reliable backend systems for healthcare, data
-                platforms, and enterprise operations.
+              <h1 className="mt-5 text-4xl font-semibold tracking-tight text-slate-50 md:text-5xl neon-text">
+                Building reliable software systems that teams can operate,
+                extend, and trust.
               </h1>
 
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                Senior software professional with 10+ years of experience
-                building, supporting, and modernizing systems across
-                healthcare, finance, and large-scale enterprise environments.
-                I deliver backend services, data workflows, and knowledge
-                graph solutions, collaborating with cross-functional teams to
-                translate complex requirements into reliable, maintainable
-                software.
+                Senior software engineer focused on backend systems, internal
+                platforms, and business-critical applications. I work well in
+                complex environments, translate messy requirements into
+                maintainable systems, and bring steady production ownership
+                from implementation through support.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -543,9 +497,7 @@ text-slate-50 md:text-5xl neon-text">
                 />
                 <a
                   href="#work"
-                  className="inline-flex items-center gap-2 rounded-xl \
-border border-slate-700/60 bg-slate-950/40 px-4 py-2 text-sm \
-text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-700/60 bg-slate-950/40 px-4 py-2 text-sm text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
                 >
                   View work
                   <ArrowUpRight className="h-4 w-4 opacity-70" />
@@ -556,21 +508,18 @@ text-slate-100 transition hover:border-violet-400/40 hover:shadow-neon"
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               <Pill
                 icon={Network}
-                title="Backend APIs"
-                text="Clean interfaces, predictable behavior, and durable \
-service contracts."
+                title="Backend Systems"
+                text="APIs, business logic, and service boundaries designed for clarity and maintainability."
               />
               <Pill
                 icon={Search}
-                title="Operational Data"
-                text="Reliable reporting pipelines and data models that teams \
-trust."
+                title="Data & Integrations"
+                text="SQL, reporting, and system-to-system workflows that keep operations moving."
               />
               <Pill
                 icon={Shield}
-                title="Reliability"
-                text="Stability, monitoring, and production ownership in \
-enterprise environments."
+                title="Production Ownership"
+                text="Monitoring, debugging, incident response, and long-term care for software in use."
               />
             </div>
           </div>
@@ -586,37 +535,36 @@ enterprise environments."
               <div className="flex items-center gap-2">
                 <Server className="h-5 w-5 text-sky-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Enterprise systems
+                  Backend engineering
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Healthcare research platforms and enterprise systems with
-                reliable workflows, integrations, and operational accuracy.
+                Application services, APIs, integrations, and workflow
+                orchestration for internal or customer-facing systems.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2">
                 <Code2 className="h-5 w-5 text-violet-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Software engineering
+                  Software delivery
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Degree-trained engineer focused on clean architecture, APIs,
-                and maintainable applications.
+                Requirements shaping, implementation, testing, deployment,
+                and iteration in real-world existing codebases.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2">
                 <Database className="h-5 w-5 text-sky-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Data platforms
+                  Data & business systems
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                SQL-driven systems for analytics and reporting, with an
-                emphasis on correctness, maintainability, and long-term
-                ownership.
+                Relational data models, reporting, and operational tooling
+                built for correctness and longevity.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
@@ -627,8 +575,8 @@ enterprise environments."
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Practical architecture, performance tuning, and systems that
-                are easy to operate and extend.
+                Supportable architecture, performance tuning, observability,
+                and calm incident response.
               </p>
             </div>
           </div>
@@ -698,7 +646,7 @@ enterprise environments."
         <Section
           id="work"
           kicker="HIGHLIGHTS"
-          title="Selected work themes"
+          title="Engineering themes"
         >
           <div className="grid gap-4 md:grid-cols-3">
             {projects.map((p) => (
@@ -707,16 +655,13 @@ enterprise environments."
                 href={p.href}
                 target="_blank"
                 rel="noreferrer"
-                className="glass rounded-2xl p-6 transition \
-hover:border-sky-400/30 hover:shadow-neon border border-slate-800/60 \
-block group"
+                className="glass rounded-2xl border border-slate-800/60 p-6 transition hover:border-sky-400/30 hover:shadow-neon block group"
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="text-sm font-semibold text-slate-50">
                     {p.name}
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 \
-group-hover:text-sky-200" />
+                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 group-hover:text-sky-200" />
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   {p.desc}
@@ -736,16 +681,16 @@ group-hover:text-sky-200" />
             </div>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li>
-                • Biomedical research systems: knowledge graphs, semantic
-                search, and reliable data workflows
+                • Backend services and internal platforms with long-term
+                ownership
               </li>
               <li>
-                • Enterprise retail operations: long-term system ownership
-                with stability and operational continuity
+                • Production support, incident response, and reliability
+                improvements
               </li>
               <li>
-                • Data platforms: SQL-driven analytics, reporting, and
-                production support
+                • Data-intensive applications, reporting workflows, and
+                system integrations
               </li>
             </ul>
           </div>
@@ -754,7 +699,7 @@ group-hover:text-sky-200" />
         <Section
           id="leadership"
           kicker="LEADERSHIP"
-          title="Lead engineer signals"
+          title="How I work"
         >
           <div className="grid gap-4 md:grid-cols-2">
             {leadership.map((item) => (
@@ -775,7 +720,7 @@ group-hover:text-sky-200" />
         <Section
           id="case-studies"
           kicker="CASE STUDIES"
-          title="Backend engineering impact"
+          title="Representative engineering work"
         >
           <div className="grid gap-4 md:grid-cols-2">
             {caseStudies.map((p) => (
@@ -784,15 +729,13 @@ group-hover:text-sky-200" />
                 href={p.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group glass rounded-2xl p-6 border border-slate-800/60 \
-transition hover:border-sky-400/30 hover:shadow-neon"
+                className="group glass rounded-2xl p-6 border border-slate-800/60 transition hover:border-sky-400/30 hover:shadow-neon"
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="text-sm font-semibold text-slate-50">
                     {p.name}
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 \
-group-hover:text-sky-200" />
+                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 group-hover:text-sky-200" />
                 </div>
                 <div className="mt-3 text-sm text-slate-300">
                   <div className="text-xs uppercase tracking-widest text-slate-400">
@@ -843,15 +786,13 @@ group-hover:text-sky-200" />
                 href={p.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group glass rounded-2xl p-6 border border-slate-800/60 \
-transition hover:border-sky-400/30 hover:shadow-neon"
+                className="group glass rounded-2xl p-6 border border-slate-800/60 transition hover:border-sky-400/30 hover:shadow-neon"
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="text-sm font-semibold text-slate-50">
                     {p.name}
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 \
-group-hover:text-sky-200" />
+                  <ArrowUpRight className="h-4 w-4 text-slate-300 opacity-70 group-hover:text-sky-200" />
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
                   {p.desc}
@@ -882,9 +823,10 @@ group-hover:text-sky-200" />
                 Open to
               </div>
               <p className="mt-3 text-sm text-slate-300">
-                Senior backend / platform roles in healthcare technology,
-                data platforms, and enterprise systems that value reliability
-                and production ownership.
+                Senior software engineering roles across industries,
+                especially teams that need backend ownership, platform
+                reliability, and someone comfortable with both new
+                development and existing systems.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <LinkBtn
