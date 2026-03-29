@@ -9,7 +9,6 @@ import {
   Shield,
   Database,
   Network,
-  Search,
   Cpu,
   Server,
   Code2,
@@ -270,8 +269,15 @@ export default function App() {
 
   const skills = useMemo(() => {
     return [
+      "Full-Stack Development",
+      "Frontend Development",
       "Backend Engineering",
+      "AI-Powered Applications",
+      "ML Inference Systems",
       "Platform Engineering",
+      "React",
+      "Vite",
+      "UI Engineering",
       "API Design",
       "System Design",
       "Service Integrations",
@@ -291,8 +297,9 @@ export default function App() {
       "FastAPI",
       "Java",
       "Node.js",
-      "React",
       "Git",
+      "AWS",
+      "SageMaker",
       "Docker",
       "Linux",
       "CI/CD",
@@ -306,21 +313,21 @@ export default function App() {
   const projects = useMemo(() => {
     return [
       {
+        name: "AI-Powered Web Applications",
+        desc: "Full-stack applications that pair user-facing web experiences with backend model inference and production deployment.",
+        tags: ["AI-Powered Apps", "AWS", "Full-Stack"],
+        href: "https://www.linkedin.com/in/moran-jay/",
+      },
+      {
         name: "Backend Services & Integrations",
         desc: "APIs, integrations, and background workflows that connect systems and keep business processes moving reliably.",
         tags: ["APIs", "Integrations", "Service Ownership"],
-        href: "https://www.linkedin.com/in/moran-jay/",
+        href: "https://github.com/jay-m-dev",
       },
       {
         name: "Platform Reliability & Support",
         desc: "Long-term ownership of production systems with monitoring, troubleshooting, and steady modernization.",
         tags: ["Reliability", "Operations", "Production Support"],
-        href: "https://github.com/jay-m-dev",
-      },
-      {
-        name: "Data & Workflow Systems",
-        desc: "SQL-backed applications, reporting pipelines, and internal tools that support day-to-day operations and decision-making.",
-        tags: ["SQL", "Reporting", "Internal Tools"],
         href: "https://github.com/jay-m-dev",
       },
     ];
@@ -333,8 +340,10 @@ export default function App() {
         title: "Senior Programmer Analyst",
         period: "Mar 2024 – Present · Los Angeles Metropolitan Area",
         bullets: [
-          "Design, build, and maintain internal applications, backend services, and data workflows used by research and operational teams.",
+          "Design, build, and maintain internal applications across both user-facing interfaces and backend services used by research and operational teams.",
           "Own delivery from requirements through implementation, testing, deployment, and production support.",
+          "Develop frontend experiences with modern web tooling, including React-based applications where they fit the problem.",
+          "Work on AI-enabled applications where backend inference and application architecture need to operate reliably in production.",
           "Improve reliability, maintainability, and performance across existing platforms.",
           "Build search and data access capabilities, including graph and vector-backed solutions where they fit the problem.",
           "Partner with stakeholders, analysts, and engineers to translate complex workflows into durable software.",
@@ -345,7 +354,7 @@ export default function App() {
         title: "Programmer Analyst",
         period: "Apr 2022 – Mar 2024 · Los Angeles Metropolitan Area",
         bullets: [
-          "Supported development and maintenance of internal applications and backend systems.",
+          "Supported development and maintenance of internal applications across frontend and backend layers.",
           "Implemented enhancements, integrations, and bug fixes across existing platforms.",
           "Assisted analytics workflows, SQL reporting, and day-to-day production support.",
           "Worked with senior engineers to deliver features while learning system architecture and operational constraints.",
@@ -385,6 +394,24 @@ export default function App() {
   const caseStudies = useMemo(() => {
     return [
       {
+        name: "AI-Powered Application Deployment on AWS",
+        problem:
+          "Deliver a web application with heavyweight model inference in the backend while keeping the product usable, deployable, and supportable in production.",
+        approach: [
+          "Built the application as a full-stack product, connecting the frontend experience to backend inference workflows.",
+          "Deployed the system on AWS with attention to operational reliability and production support.",
+          "Evolved the architecture toward SageMaker-backed inference to improve scalability and long-term maintainability.",
+        ],
+        impact: [
+          "Turned model-driven capabilities into a usable application rather than an isolated technical prototype.",
+          "Built practical experience shipping AI-powered software in a real deployment environment.",
+          "Created a stronger path for scaling inference workloads with managed AWS services.",
+        ],
+        stack: ["Full-Stack", "AWS", "ML Inference", "SageMaker"],
+        scale: "Production AI-enabled web application",
+        href: "https://www.linkedin.com/in/moran-jay",
+      },
+      {
         name: "Search & Data Discovery Platform",
         problem:
           "Help internal users find connected information quickly without relying on brittle manual lookup workflows.",
@@ -405,18 +432,18 @@ export default function App() {
       {
         name: "Legacy Application Enhancement & Support",
         problem:
-          "Keep business-critical internal applications stable while delivering incremental features and integrations.",
+          "Keep business-critical internal applications stable while delivering incremental frontend and backend enhancements.",
         approach: [
           "Worked inside existing codebases with careful, low-risk changes.",
-          "Paired feature delivery with bug fixes, SQL updates, and operational support.",
+          "Paired UI updates with backend changes, SQL updates, and operational support.",
           "Collaborated with analysts and end users to clarify requirements.",
         ],
         impact: [
-          "Improved stability and responsiveness in day-to-day use.",
+          "Improved usability, stability, and responsiveness in day-to-day use.",
           "Reduced recurring support issues with durable fixes.",
           "Delivered changes without disrupting teams that depended on the software.",
         ],
-        stack: ["Maintenance", "SQL", "Integrations"],
+        stack: ["React", "Vite", "SQL", "Integrations"],
         scale: "Production internal systems",
         href: "https://github.com/jay-m-dev",
       },
@@ -540,7 +567,7 @@ export default function App() {
             >
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-950/40 px-3 py-1 text-xs text-slate-200">
                 <span className="h-1.5 w-1.5 rounded-full bg-sky-300 animate-glow" />
-                Backend Engineering • Platform Reliability • Software Delivery
+                Full-Stack Engineering • AI-Powered Applications • Platform Reliability
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight text-slate-50 md:text-5xl neon-text">
@@ -549,11 +576,11 @@ export default function App() {
               </h1>
 
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                Senior software engineer focused on backend systems, internal
-                platforms, and business-critical applications. I work well in
-                complex environments, translate messy requirements into
-                maintainable systems, and bring steady production ownership
-                from implementation through support.
+                Senior full-stack software engineer focused on user-facing
+                applications, backend systems, and AI-powered software. I
+                work well in complex environments, translate messy
+                requirements into maintainable systems, and bring steady
+                production ownership from implementation through support.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -574,19 +601,19 @@ export default function App() {
 
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               <Pill
+                icon={Code2}
+                title="Frontend Interfaces"
+                text="React-based interfaces and internal web applications built for clarity, usability, and maintainability."
+              />
+              <Pill
                 icon={Network}
                 title="Backend Systems"
                 text="APIs, business logic, and service boundaries designed for clarity and maintainability."
               />
               <Pill
-                icon={Search}
-                title="Data & Integrations"
-                text="SQL, reporting, and system-to-system workflows that keep operations moving."
-              />
-              <Pill
                 icon={Shield}
-                title="Production Ownership"
-                text="Monitoring, debugging, incident response, and long-term care for software in use."
+                title="AI In Production"
+                text="AI-enabled applications with backend inference, cloud deployment, and operational ownership in real environments."
               />
             </div>
           </div>
@@ -600,38 +627,38 @@ export default function App() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2">
-                <Server className="h-5 w-5 text-sky-300" />
+                <Code2 className="h-5 w-5 text-violet-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Backend engineering
+                  Full-stack development
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Application services, APIs, integrations, and workflow
-                orchestration for internal or customer-facing systems.
+                User interfaces, backend services, and integrations delivered
+                as cohesive applications rather than isolated layers.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2">
-                <Code2 className="h-5 w-5 text-violet-300" />
+                <Server className="h-5 w-5 text-sky-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Software delivery
+                  Frontend engineering
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Requirements shaping, implementation, testing, deployment,
-                and iteration in real-world existing codebases.
+                React-based applications and interface work with an emphasis
+                on usability, maintainability, and real-world delivery.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2">
                 <Database className="h-5 w-5 text-sky-300" />
                 <div className="text-sm font-semibold text-slate-50">
-                  Data & business systems
+                  AI-enabled systems
                 </div>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                Relational data models, reporting, and operational tooling
-                built for correctness and longevity.
+                Web applications that incorporate model inference, cloud
+                deployment, and production-minded architecture decisions.
               </p>
             </div>
             <div className="glass rounded-2xl p-6">
@@ -748,16 +775,16 @@ export default function App() {
             </div>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li>
-                • Backend services and internal platforms with long-term
-                ownership
+                • Full-stack applications spanning React frontends, backend
+                services, and internal platforms
               </li>
               <li>
-                • Production support, incident response, and reliability
-                improvements
+                • AI-powered applications with backend inference and AWS-based
+                deployment work
               </li>
               <li>
-                • Data-intensive applications, reporting workflows, and
-                system integrations
+                • Data-intensive applications, reporting workflows,
+                integrations, and operational tooling
               </li>
             </ul>
           </div>
@@ -890,10 +917,10 @@ export default function App() {
                 Open to
               </div>
               <p className="mt-3 text-sm text-slate-300">
-                Senior software engineering roles across industries,
-                especially teams that need backend ownership, platform
-                reliability, and someone comfortable with both new
-                development and existing systems.
+                Senior full-stack or software engineering roles across
+                industries, especially teams building AI-enabled products,
+                web applications, and business-critical systems that need both
+                frontend execution and backend ownership.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <LinkBtn
