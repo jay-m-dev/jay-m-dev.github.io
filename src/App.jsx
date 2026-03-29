@@ -5,6 +5,7 @@ import {
   ArrowUpRight,
   Github,
   Linkedin,
+  Moon,
   Shield,
   Database,
   Network,
@@ -12,6 +13,7 @@ import {
   Cpu,
   Server,
   Code2,
+  SunMedium,
 } from "lucide-react";
 
 function useReducedMotion() {
@@ -176,9 +178,94 @@ function LinkBtn({ href, icon: Icon, label }) {
   );
 }
 
+function ThemeToggle({ theme, onToggle }) {
+  const isLight = theme === "light";
+
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      className="theme-toggle"
+      aria-label={isLight ? "Switch to dark theme" : "Switch to light theme"}
+      title={isLight ? "Switch to dark theme" : "Switch to light theme"}
+    >
+      <span className="theme-toggle__icon" aria-hidden="true">
+        {isLight ? <Moon className="h-4 w-4" /> : <SunMedium className="h-4 w-4" />}
+      </span>
+      <span className="theme-toggle__label">
+        {isLight ? "Dark mode" : "Light mode"}
+      </span>
+    </button>
+  );
+}
+
 export default function App() {
   const year = new Date().getFullYear();
   const reduced = useReducedMotion();
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") {
+      return "dark";
+    }
+
+    const savedTheme = window.localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      return savedTheme;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "light"
+      : "dark";
+  });
+  const [activeSection, setActiveSection] = useState("focus");
+
+  const navItems = useMemo(() => {
+    return [
+      { id: "focus", label: "Focus" },
+      { id: "skills", label: "Skills" },
+      { id: "experience", label: "Experience" },
+      { id: "work", label: "Work" },
+      { id: "approach", label: "Approach" },
+      { id: "case-studies", label: "Case Studies" },
+      { id: "open-source", label: "Public Work" },
+      { id: "contact", label: "Contact" },
+    ];
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    window.localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const sections = navItems
+      .map(({ id }) => document.getElementById(id))
+      .filter(Boolean);
+
+    if (!sections.length) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]?.target?.id) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      {
+        rootMargin: "-30% 0px -45% 0px",
+        threshold: [0.2, 0.4, 0.6],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, [navItems]);
 
   const skills = useMemo(() => {
     return [
@@ -396,7 +483,7 @@ export default function App() {
       <div className="noise absolute inset-0" />
 
       <header className="sticky top-0 z-40 border-b border-slate-800/60 bg-slate-950/35 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-3">
           <a href="#top" className="flex items-center gap-3">
             <div className="relative h-9 w-9 overflow-hidden rounded-xl border border-slate-700/60 bg-slate-950/50">
               <div className="absolute inset-0 ring-grad opacity-90" />
@@ -412,40 +499,11 @@ export default function App() {
             </div>
           </a>
 
-          <nav className="hidden items-center gap-5 text-sm md:flex">
-            <a className="text-slate-300 hover:text-slate-50" href="#focus">
-              Focus
-            </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#skills">
-              Skills
-            </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#experience">
-              Experience
-            </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#work">
-              Work
-            </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#approach">
-              Approach
-            </a>
-            <a
-              className="text-slate-300 hover:text-slate-50"
-              href="#case-studies"
-            >
-              Case Studies
-            </a>
-            <a
-              className="text-slate-300 hover:text-slate-50"
-              href="#open-source"
-            >
-              Public work
-            </a>
-            <a className="text-slate-300 hover:text-slate-50" href="#contact">
-              Contact
-            </a>
-          </nav>
-
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-end gap-2">
+            <ThemeToggle
+              theme={theme}
+              onToggle={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
             <LinkBtn
               href="https://github.com/jay-m-dev"
               icon={Github}
@@ -457,6 +515,20 @@ export default function App() {
               label="LinkedIn"
             />
           </div>
+        </div>
+
+        <div className="mx-auto max-w-6xl px-5 pb-3">
+          <nav className="site-nav" aria-label="Section navigation">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`site-nav__link${activeSection === item.id ? " is-active" : ""}`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
         </div>
       </header>
 
